@@ -1,81 +1,81 @@
-* {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
-    color: #333;
-}
-
-header {
-    text-align: center;
-    background-color: #525457;
-    color: white;
-    padding: 20px 10px;
 }
 
 main {
-    max-width: 700px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-h1 {
-    margin-bottom: 10px;
-}
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-textarea {
-    resize: vertical;
+#nome {
+    background-color: #fffdf5;
 }
 
 .genero-opcoes {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
-.genero-opcoes label {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
+input[type="email"] {
+    border: 2px solid #4a90e2;
 }
 
-.genero-opcoes input[type="radio"] {
-    margin-right: 5px;
+input:focus,
+textarea:focus {
+    border-color: #00b894;
+    outline: none;
+    background-color: #e0f7fa;
+}
+
+button:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 10px;
+    border-radius: 8px;
+    background-color: #00b894;
+    color: white;
     font-size: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button[type="submit"] {
-    background-color: #004080;
-    color: white;
+form > label[for="nome"],
+form > input#nome,
+form > label[for="email"],
+form > input#email,
+form > label[for="telefone"],
+form > input#telefone {
+    display: inline-block;
+    width: 100%;
 }
